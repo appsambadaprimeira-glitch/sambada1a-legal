@@ -1,0 +1,246 @@
+/* Estilo compartilhado — páginas legais alinhadas ao app Sambap (laranja #d97700) */
+:root {
+  color-scheme: light;
+  --primary: #d97700;
+  --primary-dark: #b45309;
+  --primary-light: #f59e0b;
+  --bg: #fff8f0;
+  --bg-accent: #ffedd5;
+  --card: #ffffff;
+  --text: #1c1917;
+  --muted: #57534e;
+  --link: #c2410c;
+  --border: rgba(217, 119, 0, 0.18);
+  --shadow: 0 12px 40px rgba(217, 119, 0, 0.12);
+  --radius: 20px;
+  --font: "Segoe UI", system-ui, -apple-system, Roboto, Ubuntu, Cantarell, Noto Sans,
+    Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #14110e;
+    --bg-accent: #292017;
+    --card: #1f1a16;
+    --text: #fafaf9;
+    --muted: #a8a29e;
+    --link: #fdba74;
+    --border: rgba(251, 191, 36, 0.2);
+    --shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: linear-gradient(
+      165deg,
+      var(--bg-accent) 0%,
+      var(--bg) 45%,
+      var(--bg) 100%
+    );
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.legal-header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: #fff;
+  padding: 28px 18px 36px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(217, 119, 0, 0.25);
+}
+
+.legal-header h1 {
+  margin: 0;
+  font-size: clamp(1.35rem, 4vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.legal-header p {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.92;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.legal-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.wrap {
+  max-width: 880px;
+  margin: -20px auto 0;
+  padding: 0 16px 56px;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+  color: var(--primary);
+}
+
+.card p,
+.card li {
+  color: var(--muted);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item strong {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-link:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  text-decoration: none !important;
+}
+
+.small {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.legal-nav {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  font-size: 0.875rem;
+}
+
+.legal-nav a {
+  color: var(--primary);
+}
+
+/* Páginas longas (privacidade / termos) */
+.card h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.card h2 {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.top {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.8125rem;
+  margin-top: 6px;
+}
+
+.nav {
+  margin: 14px 0 0;
+  font-size: 0.875rem;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav a {
+  margin-right: 14px;
+  color: var(--primary);
+}
+
+.pill {
+  display: inline-block;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  color: var(--muted);
+  background: var(--bg);
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+  background: var(--bg);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
